@@ -31,6 +31,7 @@ button{
 </html>
 
 <?php
+session_start();
 if (isset($_POST['ready'])) {
   $readyArray = $_POST["ready"];
 } else {
@@ -45,6 +46,7 @@ if (isset($_POST['delivered'])) {
   $dbc=mysqli_connect("www.math-cs.ucmo.edu","cs4130_sp2020","tempPWD!","cs4130_sp2020") or die("Cannot Connect");
       $sql = "SELECT * FROM js_orders";
       $result = mysqli_query($dbc, $sql) or die("Bad Creation");
+      echo "ID: " . $_SESSION["aID"] . "  Role: " . $_SESSION["aType"];
       echo("<h1>Orders Updated:</h1><br>");
       date_default_timezone_set('america/chicago');
        while($arow = mysqli_fetch_assoc($result)) {
