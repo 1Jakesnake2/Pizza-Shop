@@ -5,7 +5,7 @@ body {background-image: url("pizzaBackground.JPG");
       background-repeat: no-repeat;
       background-attachment: fixed;
       font-family: Arial, Helvetica, sans-serif;}
-      a{	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+a{	box-shadow:inset 0px 1px 0px 0px #f9eca0;
       background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
       background-color:#f0c911;
       border-radius:6px;
@@ -34,7 +34,6 @@ body {background-image: url("pizzaBackground.JPG");
       padding:6px 24px;
       text-decoration:none;
       text-shadow:0px 1px 0px #528009;}
-
 </style>
 <html>
 <?php
@@ -96,12 +95,13 @@ mysqli_close($dbc);
 <form action="login.php" method="post">
     <label>ID</label><input type="text" name="id"><br>
     <label>Password</label><input type="password" name="password"><br><br>
-    <input type="submit" value="Login"><br>
-      <a href="pizzaShop.php">BACK</a>
-<?php echo $error; ?>
+    <input type="submit" class = "submitButton" value="Login"><br><br>
+    <a href="pizzaShop.php">BACK</a><br>
+<?php 
+echo $error; ?>
 </div>
 <div style = "text-align:center;">
-<p>*Manager ID: 1 <br>Password: manager</p>
-<p>*Employee ID: 2 <br>Password: employee</p>
+<p>*Manager ID: 1 <br>Password: manager <br> <b>-- Can see buisness report, edit dates, delete records, edit names, etc. -- </b></p>
+<p>*Employee ID: 2 <br>Password: employee <br> <b> -- Can only edit dates --  </b></p>
 </div>
 </form>
