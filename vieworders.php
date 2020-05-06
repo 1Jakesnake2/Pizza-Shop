@@ -93,12 +93,30 @@ button{	box-shadow:inset 0px 1px 0px 0px #f9eca0;
       text-decoration:none;
       text-shadow:0px 1px 0px #ded17c;
       }
+  .editButton {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
 
 </style>
 </head>
 </html>
 
 <?php
+//Testing GitHub 2
+session_start();
 error_reporting (E_ALL ^ E_NOTICE); 
   $dbc=mysqli_connect("www.math-cs.ucmo.edu","cs4130_sp2020","tempPWD!","cs4130_sp2020") or die("Cannot Connect");
   $sql = "CREATE TABLE IF NOT EXISTS js_orders (
@@ -181,12 +199,18 @@ error_reporting (E_ALL ^ E_NOTICE);
       </form>
       </html>
       <?php
+      //Testing GitHub 3
     }else{
       echo "No Pizzas Ordered";
     }
       mysqli_close($dbc);
       echo "<button onclick=\"window.location = 'pizzaShop.php'\">GO BACK</button><br><br>";
-      echo"<form action = 'buisnessSummary.php'><input type = 'submit' value = 'Buisness Report' class = 'reportButton'></form>";
+      if($_SESSION["aType"] =="manager")
+      {
+        echo"<form action = 'manager.php'><input type = 'submit' value = 'Edit Order' class = 'editButton'></form><br>";
+        echo"<form action = 'buisnessSummary.php'><input type = 'submit' value = 'Buisness Report' class = 'reportButton'></form><br><br><br>";
+      }
+      
 
 
 
