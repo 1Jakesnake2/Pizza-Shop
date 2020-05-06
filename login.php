@@ -5,6 +5,36 @@ body {background-image: url("pizzaBackground.JPG");
       background-repeat: no-repeat;
       background-attachment: fixed;
       font-family: Arial, Helvetica, sans-serif;}
+      a{	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+      background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+      background-color:#f0c911;
+      border-radius:6px;
+      border:1px solid #e65f44;
+      display:inline-block;
+      cursor:pointer;
+      color:#c92200;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #ded17c;
+      }
+.submitButton {box-shadow:inset 0px 1px 0px 0px #f9eca0;
+      background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+      background-color:#89c403;
+      border-radius:6px;
+      border:1px solid #74b807;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #528009;}
+
 </style>
 <html>
 <?php
@@ -67,6 +97,7 @@ mysqli_close($dbc);
     <label>ID</label><input type="text" name="id"><br>
     <label>Password</label><input type="password" name="password"><br><br>
     <input type="submit" value="Login"><br>
+      <a href="pizzaShop.php">BACK</a>
 <?php echo $error; ?>
 </div>
 <div style = "text-align:center;">
