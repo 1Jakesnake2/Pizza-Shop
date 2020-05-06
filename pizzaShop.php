@@ -133,7 +133,7 @@ function start()
   var aForm = document.getElementById("orderForm");
   aForm.style.display = "hidden";
   var row = document.getElementById("topRow");
-  row.innerHTML = "<div class = 'border'><table class = 'centered' style = 'border: 2px outset #C92200; border-radius: 12px;'><tr><th><button onclick = 'findUs()'>Find Us!</button><th><th><button onclick = 'buyPizza()'>Buy Pizza</button></th><th><button onclick = 'menu()'>Menu</button></th><th><form action = 'vieworders.php'><input type = 'submit' value = 'Employees' id = 'submitButtonOrder'></form></th></tr></table></div>";
+  row.innerHTML = "<div class = 'border'><table class = 'centered' style = 'border: 2px outset #C92200; border-radius: 12px;'><tr><th><button onclick = 'findUs()'>Find Us!</button><th><th><button onclick = 'buyPizza()'>Buy Pizza</button></th><th><button onclick = 'menu()'>Menu</button></th><th><form action = 'login.php'><input type = 'submit' value = 'Employees' id = 'submitButtonOrder'></form></th></tr></table></div>";
 
 }
 
